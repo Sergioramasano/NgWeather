@@ -21,6 +21,6 @@
     </div>
   </section>
   <section class="cards">
-    <app-card *ngFor="let city of cities; let i = index" [city]="city"></app-card>
+    <app-card *ngFor="let city of cities; let idx = index" [city]="city" (change$)="change$($event)" [id]="idx"></app-card>
   </section>
 </main>

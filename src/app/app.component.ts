@@ -18,12 +18,15 @@ export class AppComponent implements OnInit {
   private longitude: number;
   public weather: Weather;
   public cityName: string;
-  public cities: Array<object> = [];
+  public cities = [];
 
   constructor(private getWeather: GetWeatherService) {
   }
 
   ngOnInit(): void {
+    if (window.localStorage.getItem('cities')) {
+      this.cities = JSON.parse(window.localStorage.getItem('cities'));
+    }
     this.geoFindMe();
   }
 
@@ -60,7 +63,15 @@ export class AppComponent implements OnInit {
         icon:  `http://openweathermap.org/img/wn/${r.weather[0].icon}@2x.png`
       };
       this.cities.unshift(this.weather);
+      const cities = JSON.stringify(this.cities);
+      window.localStorage.setItem('cities', cities);
       this.cityName = '';
     });
+  }
+
+  change$(id: number) {
+    this.cities.splice(id, 1);
+    const cities = JSON.stringify(this.cities);
+    window.localStorage.setItem('cities', cities);
   }
 }

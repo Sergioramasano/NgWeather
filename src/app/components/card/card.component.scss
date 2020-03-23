@@ -1,10 +1,21 @@
 .card{
   width: 200px;
   height: 250px;
-  background-color: #ffffff70;
+  background-color: darkslategrey;
   margin: 20px 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  .closer{
+    align-self: flex-end;
+    font-size: 10px;
+    cursor: pointer;
+    &:hover{
+      transform: rotate(30deg);
+      transition: .5s ease;
+    }
+  }
   img{
     width: 70px;
     height: 70px;

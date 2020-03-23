@@ -1,4 +1,5 @@
 <div class="card">
+  <span (click)="emitDelete($event)" [id]="id" class="closer">❌</span>
   <img [src]="city.icon" alt="img" />
   <h3>{{ city.city }}</h3>
   <span>{{ city.temp }}</span>
