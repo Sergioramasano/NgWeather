@@ -5,3 +5,28 @@ body{
   height: 100vh;
   overflow: hidden;
 }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: pink;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: blue;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

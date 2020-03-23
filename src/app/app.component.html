@@ -1,21 +1,26 @@
 <main (keyup)="$event.keyCode == 13 ? getCityByName() : null">
-  <h1>Ng Weather!</h1>
-  <div *ngIf="weather; else loading">
-    <span>{{ weather.city }}</span>
-    <span>{{ weather.temp }}</span>
-    <img [src]="weather.icon" alt="img" />
-  </div>
-  <ng-template #loading>
-    <h2>Loading...</h2>
-  </ng-template>
-  <div class="search">
-    <input
-      [(ngModel)]="cityName"
-      placeholder="Enter the name of city..."
-      type="text"
-    />
-  </div>
-  <div class="mt-2">
-    <button  (click)="getCityByName()">Search!</button>
-  </div>
+  <section>
+    <h1>Ng Weather!</h1>
+    <div *ngIf="weather; else loading">
+      <span>{{ weather.city }}</span>
+      <span>{{ weather.temp }}</span>
+      <img [src]="weather.icon" alt="img" />
+    </div>
+    <ng-template #loading>
+      <h2>Loading...</h2>
+    </ng-template>
+    <div class="search">
+      <input
+        [(ngModel)]="cityName"
+        placeholder="Enter the name of city..."
+        type="text"
+      />
+    </div>
+    <div class="mt-2">
+      <button  (click)="getCityByName()">Search!</button>
+    </div>
+  </section>
+  <section class="cards">
+    <app-card *ngFor="let city of cities; let i = index" [city]="city"></app-card>
+  </section>
 </main>

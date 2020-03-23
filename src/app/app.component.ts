@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   private longitude: number;
   public weather: Weather;
   public cityName: string;
+  public cities: Array<object> = [];
 
   constructor(private getWeather: GetWeatherService) {
   }
@@ -58,6 +59,7 @@ export class AppComponent implements OnInit {
         temp: `  ${ (r.main.temp - 273).toFixed(0) } °C `,
         icon:  `http://openweathermap.org/img/wn/${r.weather[0].icon}@2x.png`
       };
+      this.cities.unshift(this.weather);
       this.cityName = '';
     });
   }
