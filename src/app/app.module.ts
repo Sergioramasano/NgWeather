@@ -6,16 +6,23 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
-import { CardComponent } from './components/card/card.component';
+import { CardComponent } from './shared/card/card.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
+import { ShowMoreTableComponent } from './shared/show-more-table/show-more-table.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    ShowMoreTableComponent,
+    NavbarComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,8 @@ import {MatInputModule} from '@angular/material/input';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

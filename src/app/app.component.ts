@@ -1,28 +1,24 @@
-import {Component, OnInit} from '@angular/core';
-import {GetWeatherService} from './shared/get-weather.service';
+import { Component, OnInit } from '@angular/core';
+import {GetWeatherService} from './shared/services/get-weather.service';
 export interface Weather {
   city: string;
   temp: string;
   icon: string;
+  country: string;
 }
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-
 export class AppComponent implements OnInit {
-  title = 'weather';
   private latitude: number;
   private longitude: number;
   public weather: Weather;
   public cityName: string;
   public cities = [];
   public localCities = [];
-
-  constructor(private getWeather: GetWeatherService) {
-  }
+  constructor(private getWeather: GetWeatherService) { }
 
   ngOnInit(): void {
     if (window.localStorage.getItem('cities')) {
@@ -38,7 +34,8 @@ export class AppComponent implements OnInit {
         this.weather = {
           city: r.name,
           temp: `  ${ (r.main.temp - 273).toFixed(0) } °C `,
-          icon:  `http://openweathermap.org/img/wn/${r.weather[0].icon}@2x.png`
+          icon:  `http://openweathermap.org/img/wn/${r.weather[0].icon}@2x.png`,
+          country: r.sys.country
         };
         this.localCities.unshift(this.weather);
         this.cityName = '';
@@ -62,7 +59,8 @@ export class AppComponent implements OnInit {
       this.weather = {
         city: r.name,
         temp: `  ${ (r.main.temp - 273).toFixed(0) } °C `,
-        icon:  `http://openweathermap.org/img/wn/${r.weather[0].icon}@2x.png`
+        icon:  `http://openweathermap.org/img/wn/${r.weather[0].icon}@2x.png`,
+        country: r.sys.country
       };
       // the unique values
       this.cities.unshift(this.weather);
@@ -82,4 +80,5 @@ export class AppComponent implements OnInit {
     const cities = JSON.stringify(this.cities);
     window.localStorage.setItem('cities', cities);
   }
+
 }
