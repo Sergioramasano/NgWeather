@@ -11,7 +11,7 @@ export class CardComponent implements OnInit {
   @Input() id: number;
   @Output() change$ = new EventEmitter<number>();
   emittedId: number;
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }

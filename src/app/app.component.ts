@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   public weather: Weather;
   public cityName: string;
   public cities = [];
+  public localCities = [];
 
   constructor(private getWeather: GetWeatherService) {
   }
@@ -39,6 +40,7 @@ export class AppComponent implements OnInit {
           temp: `  ${ (r.main.temp - 273).toFixed(0) } °C `,
           icon:  `http://openweathermap.org/img/wn/${r.weather[0].icon}@2x.png`
         };
+        this.localCities.unshift(this.weather);
         this.cityName = '';
       });
   }
@@ -62,14 +64,20 @@ export class AppComponent implements OnInit {
         temp: `  ${ (r.main.temp - 273).toFixed(0) } °C `,
         icon:  `http://openweathermap.org/img/wn/${r.weather[0].icon}@2x.png`
       };
+      // the unique values
       this.cities.unshift(this.weather);
+      this.cities = this.cities.filter(a => !a.city.includes(this.weather.city));
+      this.cities.unshift(this.weather);
+      // the unique values end
+
+
       const cities = JSON.stringify(this.cities);
       window.localStorage.setItem('cities', cities);
       this.cityName = '';
     });
   }
 
-  change$(id: number) {
+  changer(id: number) {
     this.cities.splice(id, 1);
     const cities = JSON.stringify(this.cities);
     window.localStorage.setItem('cities', cities);

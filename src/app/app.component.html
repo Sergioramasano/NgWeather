@@ -1,10 +1,10 @@
 <main (keyup)="$event.keyCode == 13 ? getCityByName() : null">
   <section>
     <h1>Ng Weather!</h1>
-    <div *ngIf="weather; else loading">
-      <span>{{ weather.city }}</span>
-      <span>{{ weather.temp }}</span>
-      <img [src]="weather.icon" alt="img" />
+    <div *ngIf="localCities; else loading">
+      <span>{{ localCities[0].city }}</span>
+      <span>{{ localCities[0].temp }}</span>
+      <img [src]="localCities[0].icon" alt="img" />
     </div>
     <ng-template #loading>
       <h2>Loading...</h2>
@@ -21,6 +21,6 @@
     </div>
   </section>
   <section class="cards">
-    <app-card *ngFor="let city of cities; let idx = index" [city]="city" (change$)="change$($event)" [id]="idx"></app-card>
+    <app-card *ngFor="let city of cities; let idx = index" [city]="city" (change$)="changer($event)" [id]="idx"></app-card>
   </section>
 </main>
