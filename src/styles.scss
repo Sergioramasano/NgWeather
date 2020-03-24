@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 body{
   background: url("~assets/images/blue-sky.jpg") 100% 100% no-repeat;
   background-size: cover;
@@ -9,6 +11,7 @@ body{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* width */
@@ -30,3 +33,6 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

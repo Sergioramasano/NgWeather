@@ -10,7 +10,6 @@ h1{
 }
 main{
   height: 100%;
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
  section{
@@ -29,32 +28,6 @@ main{
      justify-content: space-around;
      width: 100%;
      text-align: center;
-     button{
-       padding: 10px 40px;
-       border-radius: 5px;
-       cursor: pointer;
-       border: 1px solid gray;
-       background: lavender;
-       color: rebeccapurple;
-       &:hover{
-         border: 1px solid orangered;
-         background: gray;
-         color:white;
-         transition: 1s ease;
-       }
-     }
-     input{
-       display: block;
-       width: 100%;
-       padding: 10px;
-       border-radius: 5px;
-       outline: none;
-       border: 1px solid darkslategrey;
-       &:focus{
-         border: 1px solid orangered;
-         transition: 1s ease;
-       }
-     }
    }
  }
   .cards{

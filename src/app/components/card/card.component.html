@@ -1,6 +1,30 @@
-<div class="card">
-  <span (click)="emitDelete($event)" [id]="id" class="closer">❌</span>
-  <img [src]="city.icon" alt="img" />
-  <h3>{{ city.city }}</h3>
-  <span>{{ city.temp }}</span>
-</div>
+<mat-card class="example-card">
+  <mat-card-header class="example-card__header">
+    <mat-card-title>{{ city.city }}</mat-card-title>
+    <mat-card-subtitle>СТРАНА</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    [src]="city.icon" alt="img"
+  />
+  <mat-card-content>
+    <p>
+      {{ city.temp }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="example-card__actions">
+    <button mat-fab aria-label="Example icon-button with a heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-button color="primary">More</button>
+    <button
+      (click)="emitDelete($event)"
+      [id]="id"
+      class="closer"
+      mat-button
+      color="warn"
+    >
+      Delete
+    </button>
+  </mat-card-actions>
+</mat-card>

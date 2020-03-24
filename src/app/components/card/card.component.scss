@@ -1,23 +1,30 @@
-.card{
-  width: 200px;
-  height: 250px;
-  background-color: darkslategrey;
+.example-card{
+  width: 300px;
+  background-color: #ffefd559;
   margin: 20px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px;
-  .closer{
-    align-self: flex-end;
-    font-size: 10px;
-    cursor: pointer;
-    &:hover{
-      transform: rotate(30deg);
-      transition: .5s ease;
-    }
+  padding:1.5rem 1rem;
+  border-radius: 10px;
+  &__header{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__actions{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
   img{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
   }
 }
+
+//.example-card {
+//  max-width: 400px;
+//}
+//

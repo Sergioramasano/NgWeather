@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Input} from '@angular/core';
 import {Weather} from '../../app.component';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
