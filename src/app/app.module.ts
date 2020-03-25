@@ -12,9 +12,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
-import { ShowMoreTableComponent } from './shared/show-more-table/show-more-table.component';
+import { ShowMoreTableComponent } from './pages/show-more-page/show-more-table.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { CardsPageComponent } from './pages/cards-page/cards-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LoaderComponent } from './shared/loader/loader.component';
     CardComponent,
     ShowMoreTableComponent,
     NavbarComponent,
-    LoaderComponent
+    LoaderComponent,
+    CardsPageComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
