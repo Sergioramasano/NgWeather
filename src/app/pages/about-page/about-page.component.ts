@@ -12,4 +12,12 @@ export class AboutPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  increase() {
+  }
+
+  decrease() {
+  }
+
+  clear() {
+  }
 }

@@ -1,11 +1,12 @@
-.full-container{
+.full-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color:whitesmoke;
+  color: whitesmoke;
   text-transform: capitalize;
-  .mat-list{
+
+  .mat-list {
     max-width: 500px;
     display: flex;
     justify-content: center;
@@ -13,7 +14,8 @@
     align-items: center;
     width: 100%;
     background-color: #ffffff0d;
-    &-item{
+
+    &-item {
       color: whitesmoke;
       display: flex;
       justify-content: space-between;

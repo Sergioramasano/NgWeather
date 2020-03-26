@@ -1,1 +1,14 @@
-<p>about-page works!</p>
+<section class="about">
+  <h1>About me</h1>
+  <p>Hello! My name is Sergioramasano, I am an frontend web-engeneer!</p>
+  <p>I know JS, Vue js, Angular, D3.js, responsive markup and my level of english language is intermediate.</p>
+  <a routerLink="/" class="" color="primary" mat-button routerLinkActive="active">
+    <span>Home</span>
+    <mat-icon>account_balance</mat-icon>
+  </a>
+
+  <button color="primary" (click)="increase()" mat-button>increase</button>
+  <button color="warn" (click)="decrease()" mat-button>decrease</button>
+  <button (click)="clear()" mat-button>clear</button>
+</section>
+
