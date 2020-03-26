@@ -17,6 +17,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { CardsPageComponent } from './pages/cards-page/cards-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import {RouterModule} from "@angular/router";
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { TempPipe } from './shared/pipes/temp.pipe';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     NavbarComponent,
     LoaderComponent,
     CardsPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    NotFoundPageComponent,
+    TempPipe
   ],
   imports: [
     BrowserModule,
@@ -39,6 +45,8 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     MatIconModule,
     MatInputModule,
     MatMenuModule,
+    RouterModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

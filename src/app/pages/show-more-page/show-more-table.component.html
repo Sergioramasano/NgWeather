@@ -1,2 +1,18 @@
-<p>show-more-table works!</p>
-<h1>ShowMore</h1>
+<section class="full-container">
+  <h1>{{fullWeather.name}}</h1>
+  <h3>{{fullWeather.sys.country}}</h3>
+  <img [src]="src" alt="img"/>
+
+
+  <mat-list class="list" role="list">
+    <mat-list-item role="listitem"><span>temp:</span> <span>{{fullWeather.main.temp | temp}}</span> </mat-list-item>
+    <mat-list-item role="listitem"><span>feels like:</span><span>{{fullWeather.main.feels_like | temp}}</span> </mat-list-item>
+    <mat-list-item role="listitem"><span>temp min:</span> <span>{{fullWeather.main.temp_min | temp}}</span> </mat-list-item>
+    <mat-list-item role="listitem"><span>temp_max:</span> <span>{{fullWeather.main.temp_max | temp}}</span> </mat-list-item>
+    <mat-list-item role="listitem"><span>wind speed:</span> <span>{{fullWeather.wind.speed}}  m/s</span> </mat-list-item>
+  </mat-list>
+</section>
+
+
+
+

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {GetWeatherService} from './shared/services/get-weather.service';
 export interface Weather {
   city: string;
   temp: string;

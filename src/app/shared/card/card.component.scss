@@ -7,16 +7,19 @@
   align-items: center;
   padding:1.5rem 1rem;
   border-radius: 10px;
+  height: 316px;
   &__header{
     text-align: center;
     width: 100%;
     display: flex;
     justify-content: center;
+    height: 60px;
   }
   &__actions{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
   img{
     width: 100px;

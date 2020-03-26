@@ -5,6 +5,8 @@ import {SelectivePreloadingStrategyServiceService} from './selective-preloading-
 import {ShowMoreTableComponent} from './pages/show-more-page/show-more-table.component';
 import {AboutPageComponent} from './pages/about-page/about-page.component';
 import {AppComponent} from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NotFoundPageComponent} from './pages/not-found-page/not-found-page.component';
 
 
 const routes: Routes = [
@@ -13,23 +15,26 @@ const routes: Routes = [
     component: CardsPageComponent,
   },
   {
-    path: 'show-more-page',
+    path: 'show-more-page/:name',
     component: ShowMoreTableComponent,
   },
   {
     path: 'about-page',
     component: AboutPageComponent,
   },
+  {
+    path: '**',
+    component: NotFoundPageComponent,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,
+  imports: [BrowserModule, RouterModule.forRoot(routes,
     {
       enableTracing: false, // <-- debugging purposes only
       preloadingStrategy: SelectivePreloadingStrategyServiceService,
     }
     )],
-  declarations: [ ShowMoreTableComponent, AboutPageComponent, CardsPageComponent],
   bootstrap:    [ AppComponent ],
 })
 export class AppRoutingModule { }
