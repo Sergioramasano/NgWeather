@@ -23,4 +23,12 @@ export class AboutPageComponent implements OnInit {
 
   }
 
+  increase() {
+  }
+
+  decrease() {
+  }
+
+  clear() {
+  }
 }

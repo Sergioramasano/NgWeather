@@ -21,8 +21,12 @@ import {RouterModule} from '@angular/router';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { TempPipe } from './shared/pipes/temp.pipe';
 import {MatListModule} from '@angular/material/list';
-import { StoreModule } from '@ngrx/store';
 import {todosReducer} from './redux/task.reducer';
+// import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+// import { environment } from '../environments/environment';
+// import { EffectsModule } from '@ngrx/effects';
+// import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import {StoreModule} from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -50,6 +54,10 @@ import {todosReducer} from './redux/task.reducer';
     RouterModule,
     MatListModule,
     StoreModule.forRoot({todoPage: todosReducer}),
+    // StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    // EffectsModule.forRoot([]),
+    // StoreRouterConnectingModule.forRoot(),
+    StoreModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

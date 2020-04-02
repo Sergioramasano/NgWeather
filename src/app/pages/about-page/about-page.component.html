@@ -1,3 +1,14 @@
+
 <p>about-page works!</p>
 <input type="text">
 <p *ngFor="let todo of todoState$ | async">{{todo}}</p>
+
+<section class="about">
+  <h1>About me</h1>
+  <p>Hello! My name is Sergioramasano, I am an frontend web-engeneer!</p>
+  <p>I know JS, Vue js, Angular, D3.js, responsive markup and my level of english language is intermediate.</p>
+  <a routerLink="/" class="" color="primary" mat-button routerLinkActive="active">
+    <span>Home</span>
+    <mat-icon>account_balance</mat-icon>
+  </a>
+</section>
