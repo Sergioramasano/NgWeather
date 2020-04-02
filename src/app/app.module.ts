@@ -17,10 +17,12 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { CardsPageComponent } from './pages/cards-page/cards-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
-import {RouterModule} from "@angular/router";
+import {RouterModule} from '@angular/router';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { TempPipe } from './shared/pipes/temp.pipe';
-import {MatListModule} from "@angular/material/list";
+import {MatListModule} from '@angular/material/list';
+import { StoreModule } from '@ngrx/store';
+import {todosReducer} from './redux/task.reducer';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import {MatListModule} from "@angular/material/list";
     MatMenuModule,
     RouterModule,
     MatListModule,
+    StoreModule.forRoot({todoPage: todosReducer}),
   ],
   providers: [],
   bootstrap: [AppComponent]
