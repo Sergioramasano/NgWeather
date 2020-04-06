@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Store} from '@ngrx/store';
-import {AppState} from '../../redux/app.state';
-import {ITodo} from '../../interfaces';
-import {Observable} from "rxjs";
+import { select, Store } from '@ngrx/store';
+import { AppState } from '../../redux/app.state';
+import { ITodo } from '../../interfaces';
+import { Observable } from 'rxjs';
+import { AddTodo } from '../../redux/todo.action';
 
 @Component({
   selector: 'app-about-page',
@@ -10,25 +11,39 @@ import {Observable} from "rxjs";
   styleUrls: ['./about-page.component.scss']
 })
 export class AboutPageComponent implements OnInit {
+  todoState$: Observable<any> = this.store.select('todoPage');
   // public todos: ITodo[];
-  public todoState$: Observable<ITodo>;
-  constructor(private store: Store<AppState>) { }
+  public id: number = Math.floor(Math.random() * 9999);
+  public name: string;
+  public ready = false;
+  public todo: ITodo = {
+    id: this.id,
+    name: this.name,
+    ready: this.ready
+  };
+
+  // public todoState$: Observable<ITodo>;
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
     // this.store.select('todoPage').subscribe(({todos}) => {
     //   this.todos = todos;
     // });
-
-    this.todoState$ = this.store.select('todoPage');
-
   }
 
-  increase() {
-  }
+  increase() {}
 
-  decrease() {
-  }
+  decrease() {}
 
-  clear() {
+  clear() {}
+
+  addNewTodo() {
+    this.store.dispatch(new AddTodo(this.todo));
+    setTimeout(() => {
+      this.todoState$.subscribe(r => {
+        console.log(r, 'r');
+      });
+    }, 0);
+    // console.log(this.todo);
   }
 }
