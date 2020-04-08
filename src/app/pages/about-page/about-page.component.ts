@@ -3,7 +3,7 @@ import {Observable, Subscription} from 'rxjs';
 import {select, Store} from '@ngrx/store';
 import {GetUsers} from '../../store/actions/users.actions';
 import {selectUsersList} from '../../store/selectors/users.selectors';
-import {IUser, PeriodicElement} from '../../shared/interfaces/users.interface';
+import {IUser} from '../../shared/interfaces/users.interface';
 
 @Component({
   selector: 'app-about-page',
