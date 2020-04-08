@@ -11,6 +11,13 @@
     <mat-list-item role="listitem"><span>temp_max:</span> <span>{{fullWeather.main.temp_max | temp}}</span> </mat-list-item>
     <mat-list-item role="listitem"><span>wind speed:</span> <span>{{fullWeather.wind.speed}}  m/s</span> </mat-list-item>
   </mat-list>
+
+  <ol>
+    <li *ngFor="let user of users$ | async">
+      <span>{{ user.name }}, </span>
+      <small>{{ user.address.city }}</small>
+    </li>
+  </ol>
 </section>
 
 
