@@ -29,6 +29,7 @@ import {StoreModule} from '@ngrx/store';
 import {usersReducer} from './store/reducers/users.reducers';
 import {state} from '@angular/animations';
 import {UsersEffects} from './store/effects/users.effects';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -55,10 +56,11 @@ import {UsersEffects} from './store/effects/users.effects';
     MatMenuModule,
     RouterModule,
     MatListModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25 }),
+    StoreDevtoolsModule.instrument({maxAge: 25}),
     StoreRouterConnectingModule.forRoot(),
     StoreModule.forRoot({users: usersReducer}),
-    EffectsModule.forRoot([UsersEffects])
+    EffectsModule.forRoot([UsersEffects]),
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

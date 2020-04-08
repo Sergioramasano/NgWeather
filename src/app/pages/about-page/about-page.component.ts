@@ -13,6 +13,7 @@ import {IUser} from '../../shared/interfaces/users.interface';
 export class AboutPageComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   users$: Observable<IUser[]> = this.store.pipe(select(selectUsersList));
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   constructor(private store: Store) {
     this.store.dispatch(new GetUsers());
   }
