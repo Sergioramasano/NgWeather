@@ -7,6 +7,7 @@ import {AboutPageComponent} from './pages/about-page/about-page.component';
 import {AppComponent} from './app.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NotFoundPageComponent} from './pages/not-found-page/not-found-page.component';
+import {FilteredTableComponent} from "./pages/filtered-table/filtered-table.component";
 
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'about-page',
     component: AboutPageComponent,
+  },
+  {
+    path: 'filtered-table-page',
+    component: FilteredTableComponent,
   },
   {
     path: '**',

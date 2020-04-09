@@ -1,27 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import {Weather} from '../../app.component';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Weather} from '../../interfaces';
 import {GetWeatherService} from '../../shared/services/get-weather.service';
+import {select, Store} from '@ngrx/store';
+import {GetUsers} from '../../store/actions/users.actions';
+import {Observable, Subscription} from 'rxjs';
+import {IUser} from '../../shared/interfaces/users.interface';
+import {selectUsersList} from '../../store/selectors/users.selectors';
 
 @Component({
   selector: 'app-cards-page',
   templateUrl: './cards-page.component.html',
   styleUrls: ['./cards-page.component.scss']
 })
-export class CardsPageComponent implements OnInit {
+export class CardsPageComponent implements OnInit, OnDestroy {
   private latitude: number;
   private longitude: number;
   public weather: Weather;
   public cityName: string;
   public cities = [];
   public localCities = [];
-  constructor(private getWeather: GetWeatherService) { }
+  public  subscription: Subscription;
+ public users$: Observable<IUser[]> = this.store.pipe(select(selectUsersList));
+  constructor(private getWeather: GetWeatherService, private store: Store) {
+  }
 
   ngOnInit(): void {
+    this.subscription = this.users$.subscribe();
     if (window.localStorage.getItem('cities')) {
       this.cities = JSON.parse(window.localStorage.getItem('cities'));
     }
     this.geoFindMe();
   }
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
   success() {
     this.getWeather.getWeatherByCoordinates(this.latitude, this.longitude)
       .subscribe(r => {

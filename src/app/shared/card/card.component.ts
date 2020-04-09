@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Input} from '@angular/core';
-import {Weather} from '../../app.component';
+import {Weather} from '../../interfaces';
 
 @Component({
   selector: 'app-card',

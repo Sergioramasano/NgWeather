@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-export interface Weather {
-  city: string;
-  temp: string;
-  icon: string;
-  country: string;
-}
+import {Store} from '@ngrx/store';
+import {GetUsers} from './store/actions/users.actions';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor() { }
-  ngOnInit(): void {}
+  constructor(private store: Store) {
+  }
+  ngOnInit(): void {
+    this.store.dispatch(new GetUsers());
+  }
 }

@@ -30,6 +30,7 @@ import {usersReducer} from './store/reducers/users.reducers';
 import {state} from '@angular/animations';
 import {UsersEffects} from './store/effects/users.effects';
 import {MatTableModule} from "@angular/material/table";
+import { FilteredTableComponent } from './pages/filtered-table/filtered-table.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {MatTableModule} from "@angular/material/table";
     CardsPageComponent,
     AboutPageComponent,
     NotFoundPageComponent,
-    TempPipe
+    TempPipe,
+    FilteredTableComponent
   ],
   imports: [
     BrowserModule,

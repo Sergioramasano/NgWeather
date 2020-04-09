@@ -3,3 +3,9 @@ export interface ITodo {
   name: string;
   ready: boolean;
 }
+export interface Weather {
+  city: string;
+  temp: string;
+  icon: string;
+  country: string;
+}

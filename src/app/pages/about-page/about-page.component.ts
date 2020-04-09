@@ -25,7 +25,6 @@ export class AboutPageComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['id', 'name', 'phone', 'email'];
   expandedElement: IUser | null;
   constructor(private store: Store) {
-    this.store.dispatch(new GetUsers());
   }
   ngOnInit() {
    this.subscription = this.users$.subscribe();
