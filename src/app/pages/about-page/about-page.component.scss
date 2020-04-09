@@ -1,11 +1,17 @@
 .about{
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 22px;
   color: rgba(0, 0, 0, 0.82);
+  .heading{
+    text-align: center;
+    @media screen and (max-width:900px) {
+      display: none;
+    }
+  }
   h1{
     font-size: 32px;
     color: #555555;
