@@ -13,20 +13,18 @@
     </p>
   </mat-card-content>
   <mat-card-actions class="example-card__actions">
-    <button mat-fab aria-label="Example icon-button with a heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <a
+    <button
+
       [routerLink]="['show-more-page', city.city]"
-      mat-button color="primary"
+      mat-raised-button color="primary"
     >
       More
-    </a>
+    </button>
     <button
       (click)="emitDelete($event)"
       [id]="id"
       class="closer"
-      mat-button
+      mat-raised-button
       color="warn"
     >
       Delete

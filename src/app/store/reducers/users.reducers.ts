@@ -9,8 +9,6 @@ export function usersReducer(state: IUsers = initialState, action: UsersUnion) {
         ...state
       };
     case UsersActions.GetUsersLoadedSuccess:
-      console.log(action.payload, 'fefwef');
-      console.log(state, 'fefwef');
       return {
         ...state,
         users: action.payload

@@ -31,7 +31,6 @@ export class ShowMoreTableComponent implements OnInit, OnDestroy {
   }
   getCityByName() {
     this.getWeather.getWeatherByCityName(this.cityName).subscribe((r) => {
-      console.log(r)
       this.fullWeather = r
       this.src = `http://openweathermap.org/img/wn/${r.weather[0].icon}@2x.png`;
       // this.fullWeather = {
