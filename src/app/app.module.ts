@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CardComponent } from './shared/card/card.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
@@ -57,12 +57,14 @@ import { FilteredTableComponent } from './pages/filtered-table/filtered-table.co
     MatInputModule,
     MatMenuModule,
     RouterModule,
+    ReactiveFormsModule,
     MatListModule,
     StoreDevtoolsModule.instrument({maxAge: 25}),
     StoreRouterConnectingModule.forRoot(),
     StoreModule.forRoot({users: usersReducer}),
     EffectsModule.forRoot([UsersEffects]),
-    MatTableModule
+    MatTableModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@ import {Observable, Subscription} from 'rxjs';
 import {select, Store} from '@ngrx/store';
 import {GetUsers} from '../../store/actions/users.actions';
 import {selectUsersList} from '../../store/selectors/users.selectors';
-import {IUser} from '../../shared/interfaces/users.interface';
+import {IUser, IUsers} from '../../shared/interfaces/users.interface';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {MatTableDataSource} from '@angular/material/table';
 
@@ -24,7 +24,7 @@ export class AboutPageComponent implements OnInit, OnDestroy {
   users$: Observable<IUser[]> = this.store.pipe(select(selectUsersList));
   displayedColumns: string[] = ['id', 'name', 'phone', 'email'];
   expandedElement: IUser | null;
-  constructor(private store: Store) {
+  constructor(private store: Store<IUsers>) {
   }
   ngOnInit() {
    this.subscription = this.users$.subscribe();

@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {GetWeatherService} from '../../shared/services/get-weather.service';
 import {ActivatedRoute} from '@angular/router';
-import {Store} from '@ngrx/store';
 
 @Component({
   selector: 'app-show-more-table',
@@ -12,7 +11,7 @@ export class ShowMoreTableComponent implements OnInit {
   public fullWeather: any;
   private cityName: string;
   public src: string;
-  constructor(private getWeather: GetWeatherService, private route: ActivatedRoute, private store: Store) {
+  constructor(private getWeather: GetWeatherService, private route: ActivatedRoute) {
     this.cityName = this.route.snapshot.params.name;
   }
   ngOnInit(): void {

@@ -4,7 +4,7 @@ import {GetWeatherService} from '../../shared/services/get-weather.service';
 import {select, Store} from '@ngrx/store';
 import {GetUsers} from '../../store/actions/users.actions';
 import {Observable, Subscription} from 'rxjs';
-import {IUser} from '../../shared/interfaces/users.interface';
+import {IUser, IUsers} from '../../shared/interfaces/users.interface';
 import {selectUsersList} from '../../store/selectors/users.selectors';
 
 @Component({
@@ -21,7 +21,7 @@ export class CardsPageComponent implements OnInit, OnDestroy {
   public localCities = [];
   public  subscription: Subscription;
  public users$: Observable<IUser[]> = this.store.pipe(select(selectUsersList));
-  constructor(private getWeather: GetWeatherService, private store: Store) {
+  constructor(private getWeather: GetWeatherService, private store: Store<IUsers>) {
   }
 
   ngOnInit(): void {
