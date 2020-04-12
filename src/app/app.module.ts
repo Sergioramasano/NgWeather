@@ -29,8 +29,9 @@ import {StoreModule} from '@ngrx/store';
 import {usersReducer} from './store/reducers/users.reducers';
 import {state} from '@angular/animations';
 import {UsersEffects} from './store/effects/users.effects';
-import {MatTableModule} from "@angular/material/table";
+import {MatTableModule} from '@angular/material/table';
 import { FilteredTableComponent } from './pages/filtered-table/filtered-table.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { FilteredTableComponent } from './pages/filtered-table/filtered-table.co
     StoreModule.forRoot({users: usersReducer}),
     EffectsModule.forRoot([UsersEffects]),
     MatTableModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
