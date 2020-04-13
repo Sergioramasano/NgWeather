@@ -7,7 +7,8 @@ import {AboutPageComponent} from './pages/about-page/about-page.component';
 import {AppComponent} from './app.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NotFoundPageComponent} from './pages/not-found-page/not-found-page.component';
-import {FilteredTableComponent} from "./pages/filtered-table/filtered-table.component";
+import {FilteredTableComponent} from './pages/filtered-table/filtered-table.component';
+import {ChartPageComponent} from './pages/chart-page/chart-page.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'filtered-table-page',
     component: FilteredTableComponent,
+  },
+  {
+    path: 'chart-page',
+    component: ChartPageComponent,
   },
   {
     path: '**',

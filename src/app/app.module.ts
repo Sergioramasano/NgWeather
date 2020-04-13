@@ -31,7 +31,9 @@ import {state} from '@angular/animations';
 import {UsersEffects} from './store/effects/users.effects';
 import {MatTableModule} from '@angular/material/table';
 import { FilteredTableComponent } from './pages/filtered-table/filtered-table.component';
-import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { ChartComponent } from './shared/chart/chart.component';
+import { ChartPageComponent } from './pages/chart-page/chart-page.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     AboutPageComponent,
     NotFoundPageComponent,
     TempPipe,
-    FilteredTableComponent
+    FilteredTableComponent,
+    ChartComponent,
+    ChartPageComponent
   ],
   imports: [
     BrowserModule,
