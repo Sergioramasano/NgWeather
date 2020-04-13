@@ -17,11 +17,12 @@
     min-height: 300px;
 
     tr {
-      cursor: pointer;
-
-      &:hover {
-        background-color: lightpink;
-        transition: .3s ease;
+      &:not(.mat-header-row){
+        cursor: pointer;
+        &:hover {
+          background-color: lightpink;
+          transition: .3s ease;
+        }
       }
     }
   }
