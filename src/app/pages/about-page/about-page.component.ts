@@ -1,4 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
+import {animate, state, style, transition, trigger} from "@angular/animations";
 // import {Observable, Subscription} from 'rxjs';
 // import {select, Store} from '@ngrx/store';
 // import {GetUsers} from '../../store/actions/users.actions';

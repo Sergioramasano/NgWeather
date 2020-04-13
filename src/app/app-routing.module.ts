@@ -15,22 +15,27 @@ const routes: Routes = [
   {
     path: '',
     component: CardsPageComponent,
+    data: { state: 'home' }
   },
   {
     path: 'show-more-page/:name',
     component: ShowMoreTableComponent,
+    data: { state: 'more' }
   },
   {
     path: 'about-page',
     component: AboutPageComponent,
+    data: { state: 'about' }
   },
   {
     path: 'filtered-table-page',
     component: FilteredTableComponent,
+    data: { state: 'filter' }
   },
   {
     path: 'chart-page',
     component: ChartPageComponent,
+    data: { state: 'chart' }
   },
   {
     path: '**',
