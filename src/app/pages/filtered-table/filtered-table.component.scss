@@ -1,4 +1,4 @@
-.filter-table{
+.filter-table {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,12 +6,20 @@
   width: 100vw;
   height: 100vh;
 
-  table{
-    max-width: 800px;
+  .mat-paginator {
+    max-width: 900px;
     width: 100%;
-    tr{
+  }
+
+  table {
+    max-width: 900px;
+    width: 100%;
+    min-height: 300px;
+
+    tr {
       cursor: pointer;
-      &:hover{
+
+      &:hover {
         background-color: lightpink;
         transition: .3s ease;
       }
