@@ -24,6 +24,12 @@
           transition: .3s ease;
         }
       }
+      td.mat-cell{
+        &:focus{
+          outline: none;
+          border: 1px solid transparent;
+        }
+      }
     }
   }
 }
