@@ -9,6 +9,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NotFoundPageComponent} from './pages/not-found-page/not-found-page.component';
 import {FilteredTableComponent} from './pages/filtered-table/filtered-table.component';
 import {ChartPageComponent} from './pages/chart-page/chart-page.component';
+import {FormPageComponent} from "./pages/form-page/form-page.component";
 
 
 const routes: Routes = [
@@ -36,6 +37,11 @@ const routes: Routes = [
     path: 'chart-page',
     component: ChartPageComponent,
     data: { state: 'chart' }
+  },
+  {
+    path: 'form-page',
+    component: FormPageComponent,
+    data: { state: 'form' }
   },
   {
     path: '**',

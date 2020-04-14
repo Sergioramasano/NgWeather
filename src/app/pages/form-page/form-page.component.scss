@@ -1,0 +1,86 @@
+/* ProfileEditorComponent's private CSS styles */
+form {
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
+  display: block;
+  color: white;
+
+  fieldset {
+    padding: 1rem;
+    border-radius: 1em;
+    label {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      color: coral;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      height: 2em;
+      font-size: 1em;
+      padding-left: .4em;
+      border-radius: 1em;
+      border: 1px solid white;
+
+      &.ng-invalid {
+        border: 1px solid salmon;
+      }
+      &.ng-valid {
+        border: 1px solid greenyellow;
+      }
+
+      &.ng-untouched {
+        border: 1px solid white;
+      }
+
+      &:focus {
+        outline: none;
+        background: lightgray;
+      }
+    }
+  }
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+
+
+
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+.error {
+  color:red;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

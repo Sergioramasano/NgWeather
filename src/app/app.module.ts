@@ -34,6 +34,7 @@ import { FilteredTableComponent } from './pages/filtered-table/filtered-table.co
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { ChartComponent } from './shared/chart/chart.component';
 import { ChartPageComponent } from './pages/chart-page/chart-page.component';
+import { FormPageComponent } from './pages/form-page/form-page.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ChartPageComponent } from './pages/chart-page/chart-page.component';
     TempPipe,
     FilteredTableComponent,
     ChartComponent,
-    ChartPageComponent
+    ChartPageComponent,
+    FormPageComponent
   ],
   imports: [
     BrowserModule,

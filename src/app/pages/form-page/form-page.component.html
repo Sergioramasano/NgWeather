@@ -1,0 +1,70 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <legend>Personal info</legend>
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName" required>
+    </label>
+    <p class="error" *ngIf="profileForm.get('firstName').invalid && profileForm.get('firstName').touched">
+      Uncorrect firstName
+    </p>
+
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+    <p class="error" *ngIf="profileForm.get('lastName').invalid && profileForm.get('lastName').touched">
+      Uncorrect lastName
+    </p>
+
+    <div formGroupName="address">
+      <h3>Address</h3>
+
+      <label>
+        Street:
+        <input type="text" formControlName="street">
+      </label>
+      <p class="error" *ngIf="profileForm.get('address.street').invalid && profileForm.get('address.street').touched">
+        Uncorrect street
+      </p>
+
+      <label>
+        City:
+        <input type="text" formControlName="city">
+      </label>
+      <p class="error" *ngIf="profileForm.get('address.city').invalid && profileForm.get('address.city').touched">
+        Uncorrect city
+      </p>
+
+      <label>
+        State:
+        <input type="text" formControlName="state">
+      </label>
+      <p class="error" *ngIf="profileForm.get('address.state').invalid && profileForm.get('address.state').touched">
+        Uncorrect state
+      </p>
+
+      <label>
+        Zip Code:
+        <input type="text" formControlName="zip">
+      </label>
+      <p class="error" *ngIf="profileForm.get('address.zip').invalid && profileForm.get('address.zip').touched">
+        Uncorrect zip
+      </p>
+    </div>
+
+    <div formArrayName="aliases">
+      <h3>Aliases</h3> <button (click)="addAlias()">Add Alias</button>
+
+      <div *ngFor="let alias of aliases.controls; let i=index">
+        <!-- The repeated alias template -->
+        <label>
+          Alias:
+          <input type="text" [formControlName]="i">
+        </label>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+  </fieldset>
+</form>
+
