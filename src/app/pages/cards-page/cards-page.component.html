@@ -13,9 +13,9 @@
     <div class="search">
       <mat-form-field class="example-full-width" color="warn">
         <mat-label>Set the cityName</mat-label>
-        <input [(ngModel)]="cityName"
+        <input [formControl]="cityValue"
+               id="search"
                matInput
-               placeholder="Enter the name of city..."
                type="text">
       </mat-form-field>
     </div>
@@ -25,11 +25,10 @@
   </section>
   <section class="cards">
     <app-card
-      *ngFor="let city of cities;
-              let idx = index"
+      *ngFor="let city of cities"
       [city]="city"
-      (change$)="changer($event)"
-      [id]="idx"
+      (change$)="changer(city['city'])"
+      [id]="city['city']"
     >
     </app-card>
   </section>

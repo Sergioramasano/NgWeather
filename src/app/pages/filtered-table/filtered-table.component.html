@@ -3,19 +3,22 @@
     <mat-label>Filter</mat-label>
     <input [formControl]="searchControl" matInput placeholder="Ex. ium">
   </mat-form-field>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <!-- Position Column -->
-    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-      <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-      <td [routerLink]="['/show-more-page', element.id]" mat-cell
-          *matCellDef="let element">
-        {{element[column]}}
-      </td>
-    </ng-container>
+    <table *ngIf="dataSource; else loader"  mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Position Column -->
+      <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+        <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+        <td [routerLink]="['/show-more-page', element.id]" mat-cell
+            *matCellDef="let element">
+          {{element[column]}}
+        </td>
+      </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  <mat-paginator [pageSizeOptions]="[5]" showFirstLastButtons></mat-paginator>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
+  <mat-paginator  [pageSizeOptions]="[5]" showFirstLastButtons></mat-paginator>
 </section>
 

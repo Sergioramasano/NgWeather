@@ -38,7 +38,6 @@ export class FilteredTableComponent implements OnInit, OnDestroy {
       )
       .subscribe((filterValue) => {
         this.dataSource.filter = filterValue.trim().toLowerCase();
-        // this.elementData = this.dataSource.filteredData;
       });
   }
   subscribing() {

@@ -1,6 +1,7 @@
+$black: #000000a3;
 .example-card{
   width: 300px;
-  background-color: #ffefd559;
+  background-color: #ffffffb5;
   margin: 20px 50px;
   display: flex;
   flex-direction: column;
@@ -20,6 +21,24 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    #moreBtn{
+      background-color: $black;
+      color:white;
+      &:hover{
+        background-color: white;
+        color:$black;
+        transition: .5s ease;
+      }
+    }
+    .closer{
+      background-color: white;
+      color:$black;
+      &:hover{
+        background-color: $black;
+        color:white;
+        transition: .5s ease;
+      }
+    }
   }
   img{
     width: 100px;

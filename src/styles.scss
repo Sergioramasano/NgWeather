@@ -21,17 +21,17 @@ body{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: pink;
+  background: gray;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: blue;
+  background: white;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: lightblue;
 }
 
 html, body { height: 100%; }

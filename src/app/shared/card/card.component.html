@@ -14,9 +14,9 @@
   </mat-card-content>
   <mat-card-actions class="example-card__actions">
     <button
-
       [routerLink]="['show-more-page', city.city]"
-      mat-raised-button color="primary"
+      id="moreBtn"
+      mat-raised-button
     >
       More
     </button>
@@ -25,7 +25,6 @@
       [id]="id"
       class="closer"
       mat-raised-button
-      color="warn"
     >
       Delete
     </button>

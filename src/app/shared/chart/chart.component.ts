@@ -7,7 +7,7 @@ import {DataModel} from '../../interfaces';
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss']
 })
-export class ChartComponent implements OnChanges, AfterViewChecked {
+export class ChartComponent implements AfterViewChecked {
   @ViewChild('chart')
   private chartContainer: ElementRef;
 
@@ -17,10 +17,6 @@ export class ChartComponent implements OnChanges, AfterViewChecked {
   margin = {top: 20, right: 20, bottom: 30, left: 40};
 
   constructor() { }
-
-  ngOnChanges(): void {
-
-  }
 
   private createChart(): void {
     d3.select('svg').remove();

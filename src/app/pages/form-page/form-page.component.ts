@@ -10,8 +10,7 @@ import {Subscription} from 'rxjs';
   templateUrl: './form-page.component.html',
   styleUrls: ['./form-page.component.scss']
 })
-export class FormPageComponent implements OnDestroy {
-  subs: Subscription;
+export class FormPageComponent {
   profileForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
@@ -31,33 +30,17 @@ export class FormPageComponent implements OnDestroy {
   }
 
   constructor(private fb: FormBuilder, private sender: SendFormService) { }
-
-
-  updateProfile() {
-    this.profileForm.patchValue({
-      firstName: 'Nancy',
-      address: {
-        street: '123 Drew Street'
-      }
-    });
-  }
-
   addAlias() {
     this.aliases.push(this.fb.control(''));
   }
 
   onSubmit() {
     const formData = this.profileForm.value;
-    this.subs = this.sender.sendForm(formData).subscribe(() => {
-      console.log('success');
+    this.sender.sendForm(formData).subscribe(() => {
       this.profileForm.reset();
     });
   }
-  ngOnDestroy(): void {
-    this.subs.unsubscribe();
-  }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

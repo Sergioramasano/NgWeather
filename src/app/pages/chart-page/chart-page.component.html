@@ -1,2 +1,6 @@
 <h1>The user's weather chat</h1>
-<app-chart [data]="data"></app-chart>
+<app-chart *ngIf="data; else loader" [data]="data"></app-chart>
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
+
