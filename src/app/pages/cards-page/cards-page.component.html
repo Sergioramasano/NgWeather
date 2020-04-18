@@ -5,7 +5,7 @@
       <span>{{ localCities[0]?.city }}</span>
       <span style="margin:0 10px">{{ localCities[0]?.country }}</span>
       <span>{{ localCities[0]?.temp }}</span>
-      <img [src]="localCities[0]?.icon" alt="img"/>
+      <img *ngIf="localCities[0]?.icon" [src]="localCities[0]?.icon" alt="img"/>
     </div>
     <ng-template #loading>
       <h2>Loading...</h2>
