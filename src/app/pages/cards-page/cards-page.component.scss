@@ -12,6 +12,10 @@
     margin: auto;
     flex-wrap: wrap;
     color: white;
+    .search{
+      background-color: #ffffff4a;
+      border-radius: 0 30% 0 30%;
+    }
     div{
       display: flex;
       flex-direction: row;

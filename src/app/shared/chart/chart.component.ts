@@ -56,9 +56,10 @@ export class ChartComponent implements AfterViewChecked {
       .call(d3.axisLeft(y).ticks(5, 'K'))
       .append('text')
       .attr('fill', 'red')
-      .attr('font-size', '14px')
+      .attr('font-size', '10px')
       .attr('transform', 'rotate(-90)')
-      .attr('y', 6)
+      .attr('y', 4)
+      .attr('x', 10)
       .attr('dy', '0.71em')
       .attr('text-anchor', 'end')
       .text('temperature, K');

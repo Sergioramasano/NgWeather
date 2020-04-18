@@ -1,6 +1,8 @@
 /* ProfileEditorComponent's private CSS styles */
 form {
   max-width: 400px;
+  max-height: 550px;
+  overflow-y:auto;
   margin: auto;
   width: 100%;
   display: block;
@@ -23,17 +25,17 @@ form {
       font-size: 1em;
       padding-left: .4em;
       border-radius: 1em;
-      border: 1px solid white;
+      border: 4px solid white;
 
       &.ng-invalid {
-        border: 1px solid salmon;
+        border: 4px solid salmon;
       }
       &.ng-valid {
-        border: 1px solid greenyellow;
+        border: 4px solid greenyellow;
       }
 
       &.ng-untouched {
-        border: 1px solid white;
+        border: 4px solid white;
       }
 
       &:focus {
