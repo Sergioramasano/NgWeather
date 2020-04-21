@@ -5,7 +5,12 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-
+#search{
+  background-color: #ffffff4a;
+  border-radius: 0 30% 0 30%;
+  color: white;
+  padding: .5rem;
+}
   .mat-paginator {
     max-width: 900px;
     width: 100%;
