@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect, ofType} from '@ngrx/effects';
-import {GetUsersLoadedError, GetUsersLoadedSuccess, UsersActions} from '../actions/users.actions';
-import {catchError, map, mergeMap, share, switchMap, tap} from 'rxjs/operators';
+import {GetUsersLoadedSuccess, UsersActions} from '../actions/users.actions';
+import {mergeMap, share, switchMap} from 'rxjs/operators';
 import {GetUsersService} from '../../shared/services/get-users.service';
 import {IUsers} from '../../shared/interfaces/users.interface';
 
