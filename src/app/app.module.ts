@@ -37,6 +37,7 @@ import { ChartPageComponent } from './pages/chart-page/chart-page.component';
 import { FormPageComponent } from './pages/form-page/form-page.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import {RefDirective} from './shared/directives/ref.directive';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import {RefDirective} from './shared/directives/ref.directive';
     MatTableModule,
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
     MatPaginatorModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
