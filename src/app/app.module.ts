@@ -35,6 +35,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { ChartComponent } from './shared/chart/chart.component';
 import { ChartPageComponent } from './pages/chart-page/chart-page.component';
 import { FormPageComponent } from './pages/form-page/form-page.component';
+import { ModalComponent } from './shared/modal/modal.component';
+import {RefDirective} from './shared/directives/ref.directive';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { FormPageComponent } from './pages/form-page/form-page.component';
     FilteredTableComponent,
     ChartComponent,
     ChartPageComponent,
-    FormPageComponent
+    FormPageComponent,
+    ModalComponent,
+    RefDirective
   ],
   imports: [
     BrowserModule,
