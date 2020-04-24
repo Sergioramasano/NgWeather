@@ -1,4 +1,5 @@
 <main [@routerTransition]="getState(o)">
+  <div class="cursor" [style.top]="top" [style.left]="left" [ngClass]="{'expand':expand}"></div>
   <app-navbar></app-navbar>
   <router-outlet #o="outlet"></router-outlet>
 </main>
