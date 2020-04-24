@@ -6,6 +6,13 @@
   align-items: center;
   font-size: 22px;
   color: whitesmoke;
+  a{
+    color:white;
+    &:hover{
+      color:pink;
+      transition: 1s ease;
+    }
+  }
   .heading{
     text-align: center;
   }
