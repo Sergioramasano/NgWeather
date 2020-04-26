@@ -3,6 +3,7 @@
     <mat-label>Filter</mat-label>
     <input [formControl]="searchControl" id="search" matInput placeholder="Ex. ium">
   </mat-form-field>
+  <div class="table-wrap">
     <table *ngIf="dataSource; else loader"  mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <!-- Position Column -->
       <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
@@ -16,9 +17,11 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-  <ng-template #loader>
+    <mat-paginator  [pageSizeOptions]="[5]" showFirstLastButtons></mat-paginator>
+  </div>
+    <ng-template #loader>
     <app-loader></app-loader>
   </ng-template>
-  <mat-paginator  [pageSizeOptions]="[5]" showFirstLastButtons></mat-paginator>
+
 </section>
 

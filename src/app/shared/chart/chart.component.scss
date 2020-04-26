@@ -1,6 +1,14 @@
 #chart{
   max-height: 500px;
-  max-width: 1350px;
+  width: 1350px;
   margin: auto;
   background-color: #fff;
+  @media screen and (max-width: 722px){
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 600px;
+    &::-webkit-scrollbar-track{
+      background-color: transparent;
+    }
+  }
 }

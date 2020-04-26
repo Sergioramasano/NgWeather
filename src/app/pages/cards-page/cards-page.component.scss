@@ -37,6 +37,9 @@
     max-height: 700px;
     margin-bottom: 20px;
     padding-bottom: 350px;
+    @media screen and (max-width: 722px){
+      justify-content: center;
+    }
   }
 }
 

@@ -1,5 +1,7 @@
 <h1>The user's weather chart</h1>
-<app-chart *ngIf="data; else loader" [data]="data"></app-chart>
+<div class="chart-wrap">
+  <app-chart *ngIf="data; else loader" [data]="data"></app-chart>
+</div>
 <button
   routerLink="/filtered-table-page"
   routerLinkActive="active"

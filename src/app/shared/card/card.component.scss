@@ -1,6 +1,10 @@
 $black: #000000a3;
 .example-card{
   width: 300px;
+  @media screen and (max-width: 722px){
+    margin-left: 0;
+    margin-right: 0;
+  }
   background-color: #ffffffb5;
   margin: 20px 50px;
   display: flex;
@@ -45,8 +49,10 @@ $black: #000000a3;
     height: 100px;
   }
 }
-
-//.example-card {
-//  max-width: 400px;
+//.ng-star-inserted{
+//  @media screen and (max-width: 722px){
+//    width: 92%;
+//    padding: 0;
+//    margin: 0;
+//  }
 //}
-//

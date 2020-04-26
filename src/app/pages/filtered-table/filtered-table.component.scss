@@ -5,6 +5,7 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 #search{
   background-color: #ffffff4a;
   border-radius: 0 30% 0 30%;
@@ -12,27 +13,31 @@
   padding: .5rem;
 }
   .mat-paginator {
-    max-width: 900px;
-    width: 100%;
+    width: 900px;
   }
+  .table-wrap{
+    padding-bottom: 2rem;
+    @media screen and (max-width: 722px){
+      overflow-x: auto;
+      width: 100%;
+    }
+    table {
+      width: 900px;
+      min-height: 300px;
 
-  table {
-    max-width: 900px;
-    width: 100%;
-    min-height: 300px;
-
-    tr {
-      &:not(.mat-header-row){
-        cursor: pointer;
-        &:hover {
-          background-color: lightpink;
-          transition: .3s ease;
+      tr {
+        &:not(.mat-header-row){
+          cursor: pointer;
+          &:hover {
+            background-color: lightpink;
+            transition: .3s ease;
+          }
         }
-      }
-      td.mat-cell{
-        &:focus{
-          outline: none;
-          border: 1px solid transparent;
+        td.mat-cell{
+          &:focus{
+            outline: none;
+            border: 1px solid transparent;
+          }
         }
       }
     }

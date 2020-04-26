@@ -1,0 +1,96 @@
+[debug] [2020-04-26T09:46:58.777Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:46:58.783Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\Desktop\IT\NgWeather\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-26T09:46:58.784Z] CLI Version:   8.1.1
+[debug] [2020-04-26T09:46:58.784Z] Platform:      win32
+[debug] [2020-04-26T09:46:58.784Z] Node Version:  v12.5.0
+[debug] [2020-04-26T09:46:58.787Z] Time:          Sun Apr 26 2020 12:46:58 GMT+0300 (GMT+03:00)
+[debug] [2020-04-26T09:46:58.787Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:46:58.787Z] 
+[debug] [2020-04-26T09:46:58.825Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-26T09:46:58.918Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:82:5)
+    at async GoogleAuth.getClient (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GoogleAuth.getAccessToken (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:524:24)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-04-26T09:47:15.667Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:47:15.672Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\Desktop\IT\NgWeather\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-26T09:47:15.673Z] CLI Version:   8.1.1
+[debug] [2020-04-26T09:47:15.673Z] Platform:      win32
+[debug] [2020-04-26T09:47:15.673Z] Node Version:  v12.5.0
+[debug] [2020-04-26T09:47:15.675Z] Time:          Sun Apr 26 2020 12:47:15 GMT+0300 (GMT+03:00)
+[debug] [2020-04-26T09:47:15.676Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:47:15.676Z] 
+[debug] [2020-04-26T09:47:15.700Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-26T09:47:15.818Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:82:5)
+    at async GoogleAuth.getClient (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GoogleAuth.getAccessToken (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:524:24)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-04-26T09:48:41.684Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:48:41.689Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\Desktop\IT\NgWeather\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-26T09:48:41.690Z] CLI Version:   8.1.1
+[debug] [2020-04-26T09:48:41.690Z] Platform:      win32
+[debug] [2020-04-26T09:48:41.690Z] Node Version:  v12.5.0
+[debug] [2020-04-26T09:48:41.694Z] Time:          Sun Apr 26 2020 12:48:41 GMT+0300 (GMT+03:00)
+[debug] [2020-04-26T09:48:41.694Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:48:41.694Z] 
+[debug] [2020-04-26T09:48:41.718Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-26T09:48:41.805Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:82:5)
+    at async GoogleAuth.getClient (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GoogleAuth.getAccessToken (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:524:24)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-04-26T09:49:54.958Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:49:54.965Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\Desktop\IT\NgWeather\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-26T09:49:54.968Z] CLI Version:   8.1.1
+[debug] [2020-04-26T09:49:54.968Z] Platform:      win32
+[debug] [2020-04-26T09:49:54.968Z] Node Version:  v12.5.0
+[debug] [2020-04-26T09:49:54.972Z] Time:          Sun Apr 26 2020 12:49:54 GMT+0300 (GMT+03:00)
+[debug] [2020-04-26T09:49:54.972Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:49:54.972Z] 
+[debug] [2020-04-26T09:49:55.012Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-26T09:49:55.180Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:82:5)
+    at async GoogleAuth.getClient (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GoogleAuth.getAccessToken (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:524:24)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-04-26T09:52:35.177Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:52:35.182Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\Desktop\IT\NgWeather\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-26T09:52:35.187Z] CLI Version:   8.1.1
+[debug] [2020-04-26T09:52:35.187Z] Platform:      win32
+[debug] [2020-04-26T09:52:35.187Z] Node Version:  v12.5.0
+[debug] [2020-04-26T09:52:35.190Z] Time:          Sun Apr 26 2020 12:52:35 GMT+0300 (GMT+03:00)
+[debug] [2020-04-26T09:52:35.190Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:52:35.191Z] 
+[debug] [2020-04-26T09:52:35.218Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-26T09:52:35.313Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:82:5)
+    at async GoogleAuth.getClient (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GoogleAuth.getAccessToken (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:524:24)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-04-26T09:54:16.305Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:54:16.310Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\Desktop\IT\NgWeather\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-26T09:54:16.311Z] CLI Version:   8.1.1
+[debug] [2020-04-26T09:54:16.311Z] Platform:      win32
+[debug] [2020-04-26T09:54:16.311Z] Node Version:  v12.5.0
+[debug] [2020-04-26T09:54:16.314Z] Time:          Sun Apr 26 2020 12:54:16 GMT+0300 (GMT+03:00)
+[debug] [2020-04-26T09:54:16.314Z] ----------------------------------------------------------------------
+[debug] [2020-04-26T09:54:16.315Z] 
+[debug] [2020-04-26T09:54:16.340Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-26T09:54:16.426Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:82:5)
+    at async GoogleAuth.getClient (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GoogleAuth.getAccessToken (C:\Users\User\Desktop\IT\NgWeather\node_modules\google-auth-library\build\src\auth\googleauth.js:524:24)
+[error] 
+[error] Error: An unexpected error has occurred.
